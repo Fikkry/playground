@@ -17,6 +17,7 @@ class CreateContactFormsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('massage');
             $table->timestamps();
         });
     }

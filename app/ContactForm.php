@@ -3,9 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravolt\Suitable\AutoFilter;
+use Laravolt\Suitable\AutoSort;
 
 class ContactForm extends Model
 {
-    protected $fillable = ['name', 'email', 'message'];
+    use AutoSort;
+    use AutoFilter;
+
     protected $guarded = [];
+
+    protected $searchableColumns = ['name', 'email', 'message'];
 }

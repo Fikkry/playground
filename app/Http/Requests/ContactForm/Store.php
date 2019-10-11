@@ -25,7 +25,7 @@ class Store extends FormRequest
     {
         return [
             'name' => ['required', new \App\Rules\MinimumWords(2)],
-            'email' => ['required', 'email', 'unique:contact_form'],
+            'email' => ['required', 'email'],
             'message' => ['required', 'min:20'],
         ];
     }
